@@ -5,7 +5,7 @@ const PopularMenu = () => {
   return (
     <div className="bg-[#fff1cb] w-full h-full py-20 flex flex-col items-center gap-10">
       <div className="flex items-center justify-between px-10 gap-10">
-        <h1 className="font-bold text-3xl md:text-5xl uppercase ">
+        <h1 className="font-bold text-2xl md:text-5xl uppercase ">
           Our popular menu
         </h1>
         <div className="flex gap-10">
