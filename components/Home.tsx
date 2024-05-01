@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Seller from "./Seller";
 import Delivery from "./Delivery";
+import DownloadApp from "./DownloadApp";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       </div>
       <Seller />
       <Delivery />
+      <DownloadApp />
     </div>
   );
 };
