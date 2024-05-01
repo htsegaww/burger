@@ -2,6 +2,7 @@ import { ChevronLeft, ChevronRight, Heart, Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import StarComponent from "./Star";
 
 const Seller = () => {
   return (
@@ -15,12 +16,8 @@ const Seller = () => {
           <Image src="/seller/swagBurger.png" alt="" width="150" height="200" />
           <div className="flex flex-col w-[300px] items-center justify-center  gap-2">
             <p className="font-bold">Swag Burger</p>
-            <div className="flex ">
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
+            <div>
+              <StarComponent />
             </div>
             <p className="font-bold">$70.99</p>
             <Button className="text-[#c13425] -px-4 font-bold text-md w-full">
@@ -37,12 +34,8 @@ const Seller = () => {
           <Image src="/seller/swagBurger.png" alt="" width="150" height="200" />
           <div className="flex flex-col w-[300px] items-center justify-center  gap-2">
             <p className="font-bold">Swag Burger</p>
-            <div className="flex ">
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
+            <div>
+              <StarComponent />
             </div>
             <p className="font-bold">$70.99</p>
             <Button className=" -px-4 font-bold text-md w-full text-[#fec725]">
@@ -59,12 +52,8 @@ const Seller = () => {
           <Image src="/seller/swagBurger.png" alt="" width="150" height="200" />
           <div className="flex flex-col w-[300px] items-center justify-center  gap-2">
             <p className="font-bold">Swag Burger</p>
-            <div className="flex ">
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
+            <div>
+              <StarComponent />
             </div>
             <p className="font-bold">$70.99</p>
             <Button className="text-[#c13425] -px-4 font-bold text-md w-full">
@@ -81,12 +70,8 @@ const Seller = () => {
           <Image src="/seller/swagBurger.png" alt="" width="150" height="200" />
           <div className="flex flex-col w-[300px] items-center justify-center  gap-2">
             <p className="font-bold">Swag Burger</p>
-            <div className="flex ">
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
-              <Star fill="#fec725" className="text-[#fec725]" size={15} />
+            <div>
+              <StarComponent />
             </div>
             <p className="font-bold">$70.99</p>
             <Button className="text-[#c13425] -px-4 font-bold text-md w-full">

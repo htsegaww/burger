@@ -4,6 +4,8 @@ import Hero from "./Hero";
 import Seller from "./Seller";
 import Delivery from "./Delivery";
 import DownloadApp from "./DownloadApp";
+import Welcome from "./Welcome";
+import PopularMenu from "./PopularMenu";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <Seller />
       <Delivery />
       <DownloadApp />
+      <Welcome />
+      <PopularMenu />
     </div>
   );
 };
