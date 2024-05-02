@@ -6,6 +6,7 @@ import Delivery from "./Delivery";
 import DownloadApp from "./DownloadApp";
 import Welcome from "./Welcome";
 import PopularMenu from "./PopularMenu";
+import Location from "./Location";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <DownloadApp />
       <Welcome />
       <PopularMenu />
+      <Location />
     </div>
   );
 };
