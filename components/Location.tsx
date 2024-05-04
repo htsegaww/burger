@@ -1,3 +1,6 @@
+"use client";
+import { FadeIn } from "@/variants";
+import { motion } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
@@ -9,7 +12,14 @@ import React from "react";
 
 const Location = () => {
   return (
-    <div className="bg-[#fec725] w-full h-full py-20">
+    <motion.div
+      variants={FadeIn("down", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.6 }}
+      className="bg-[#fec725] w-full h-full  py-32 mx-auto"
+      id="Location"
+    >
       <div>
         <h1 className="text-5xl font-bold text-center text-[#421709]">
           Location
@@ -51,7 +61,7 @@ const Location = () => {
           <ChevronRight />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

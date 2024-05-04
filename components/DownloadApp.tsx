@@ -1,15 +1,29 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
+import { FadeIn } from "@/variants";
 
 const DownloadApp = () => {
   return (
-    <div className="hidden md:bg-[#fff1cb] md:w-full md:h-full md:py-16 md:flex mx-auto items-center justify-center">
+    <div className="hidden md:bg-[#fff1cb] md:w-full md:h-screen md:py-16 md:flex mx-auto items-center justify-center">
       <div className=" md:flex mx-auto items-center justify-center">
-        <div>
+        <motion.div
+          variants={FadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+        >
           <Image src="/download/download.png" alt="" width="600" height={250} />
-        </div>
-        <div className="flex flex-col gap-5">
+        </motion.div>
+        <motion.div
+          variants={FadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+          className="flex flex-col gap-5"
+        >
           <h1 className="text-5xl w-[400px] font-bold">
             Get started with Favorite burger
           </h1>
@@ -67,7 +81,7 @@ const DownloadApp = () => {
             />
             <Image src="/download/google.png" alt="" width="260" height="40" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between py-5 px-4 md:px-36 mx-auto ">
+    <div className="flex items-center justify-between py-5 px-4 md:px-36 mx-auto">
       <div>
         <Logo />
       </div>

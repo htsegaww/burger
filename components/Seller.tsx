@@ -1,12 +1,22 @@
+"use client";
 import { ChevronLeft, ChevronRight, Heart, Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import StarComponent from "./Star";
+import { motion } from "framer-motion";
+import { FadeIn } from "@/variants";
 
 const Seller = () => {
   return (
-    <div className="bg-[#fff1cb] w-full h-full py-20 relative">
+    <motion.div
+      // variants={FadeIn("left", 0.2)}
+      // initial="hidden"
+      // whileInView={"show"}
+      // viewport={{ once: false, amount: 0.6 }}
+      className="bg-[#fff1cb] w-full h-full md:h-screen mx-auto py-20 relative"
+      id="Seller"
+    >
       <h1 className="font-bold text-center text-4xl py-10">OUR BEST SELLER</h1>
 
       <div className="flex md:flex-row flex-col items-center justify-center gap-2 ">
@@ -90,7 +100,7 @@ const Seller = () => {
       <div className="hidden absolute md:top-[50%] md:left-[20%] h-10 w-10 border md:flex items-center justify-center rounded-full bg-[#fbf4df] shadow-[5px_5px_rgba(0,_0,_0,_0.9),_10px_10px_rgba(0,_0,_0,_0)] cursor-pointer">
         <ChevronLeft />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

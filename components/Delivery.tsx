@@ -1,15 +1,34 @@
+"use client";
+import { FadeIn } from "@/variants";
+import { motion } from "framer-motion";
 import { Cog, Truck } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 const Delivery = () => {
   return (
-    <div className="w-full h-full bg-[#421709]">
-      <div className="w-full flex md:flex-row flex-col items-center md:items-start justify-center gap-14 py-20">
-        <div>
+    <motion.div
+      variants={FadeIn("down", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.6 }}
+      className="w-full bg-[#421709]"
+    >
+      <div className="w-full md:h-screen h-full flex md:flex-row flex-col mx-auto items-center md:items-start justify-center gap-14 py-28">
+        <motion.div
+          variants={FadeIn("right", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+        >
           <Image src="/delivery/delivery.png" alt="" width="350" height={350} />
-        </div>
-        <div className="flex flex-col gap-3">
+        </motion.div>
+        <motion.div
+          variants={FadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+          className="flex flex-col gap-3"
+        >
           <Image src="/delivery/burger-1.png" width="100" height={350} alt="" />
           <Image
             src="/delivery/sandwitch.png"
@@ -23,10 +42,16 @@ const Delivery = () => {
             height={350}
             alt=""
           />
-        </div>
+        </motion.div>
 
         {/* the  delivery cog */}
-        <div className="flex flex-col  ">
+        <motion.div
+          variants={FadeIn("left", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+          className="flex flex-col  "
+        >
           <h1 className="text-white md:text-start text-center text-5xl md:w-[500px] w-[400px] font-bold">
             The fastest food delivery in town
           </h1>
@@ -54,9 +79,9 @@ const Delivery = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

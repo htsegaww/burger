@@ -6,7 +6,6 @@ import {
   ChevronsLeft,
   ChevronsRight,
   Plus,
-  PlusCircle,
   Star,
   Trash2,
 } from "lucide-react";
@@ -14,6 +13,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import hero from "@/public/hero/hero.png";
+import { motion } from "framer-motion";
+import { FadeIn } from "@/variants";
+
 const carouselItem = [
   {
     name: "tomatos",
@@ -50,11 +52,20 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex md:gap-[300px] h-full flex-col lg:flex-row lg:justify-between justify-center items-center w-full mt-10 overflow-hidden">
-      <div className="flex flex-col w-[400px]">
-        <h1 className="text-5xl w-full md:text-start text-center md:w-[450px] md:ml-36 font-extrabold mt-12">
+    <div
+      className="flex md:gap-[300px] md:h-screen flex-col lg:flex-row lg:justify-between justify-center items-center w-full py-28 overflow-hidden"
+      id="Hero"
+    >
+      <motion.div
+        variants={FadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.6 }}
+        className="flex flex-col w-[400px]"
+      >
+        <motion.h1 className="text-5xl w-full md:text-start text-center md:w-[450px] md:ml-36 font-extrabold mt-12">
           Make your burger 🍔 and order
-        </h1>
+        </motion.h1>
         <Image
           // src="/hero/hero.png"
           src={hero}
@@ -63,10 +74,16 @@ const Hero = () => {
           // height="389"
           className=" md:-mt-36 w-[640px] h-[640px] md:w-[700px] md:h-[700px] object-cover -mt-32 md:ml-36"
         />
-      </div>
+      </motion.div>
 
       {/* middle section */}
-      <div className="h-[700px] w-[400px] bg-gradient-to-b from-[#fec725] via-yellow-100 to-[#fec725] mt-5 md:mt-0">
+      <motion.div
+        variants={FadeIn("up", 0.6)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.6 }}
+        className="h-[700px] w-[400px] bg-gradient-to-b from-[#fec725] via-yellow-100 to-[#fec725] mt-5 md:mt-0"
+      >
         <div className=" flex items-center justify-center flex-col gap-3">
           {/* images */}
           <div className="flex flex-col items-center justify-center mt-3">
@@ -170,10 +187,16 @@ const Hero = () => {
             Confirm Burger $65
           </Button>
         </div>
-      </div>
+      </motion.div>
       {/*  */}
 
-      <div className="hidden md:hidden lg:flex flex-col md:w-full lg:w-[400px] items-center mr-28 gap-y-10 mx-auto">
+      <motion.div
+        variants={FadeIn("down", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.6 }}
+        className="hidden md:hidden lg:flex flex-col md:w-full lg:w-[400px] items-center mr-28 gap-y-10 mx-auto"
+      >
         <Image
           src="/burger.png"
           alt=""
@@ -197,7 +220,7 @@ const Hero = () => {
           <p className="text-5xl font-bold">1M</p>
           <p className="font-bold">Customer</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
