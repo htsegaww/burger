@@ -5,11 +5,7 @@ import Image from "next/image";
 
 //icons
 
-import {
-  MdOutlineMapsHomeWork,
-  MdOutlineBuildCircle,
-  MdOutlineDirectionsCar,
-} from "react-icons/md";
+import { MdOutlineMapsHomeWork, MdOutlineBuildCircle } from "react-icons/md";
 
 import CountUp from "react-countup";
 

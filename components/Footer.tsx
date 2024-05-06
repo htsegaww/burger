@@ -1,7 +1,5 @@
 "use client";
 
-// image
-import Image from "next/image";
 //icons
 import { FaPhone, FaEnvelope } from "react-icons/fa6";
 
